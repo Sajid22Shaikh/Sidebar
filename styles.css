@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.under {
+  margin-left: 10px;
+  padding: 6px;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+img {
+  display: inline;
+  width: 2%;
+  height: 2%;
+  border-radius: 50%;
+  /* background-color: #007bff; */
+}
+
+.filter-container {
+
+    width: 300px;
+    background-color: #e0dede;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    /* max-height: 700px; Set a maximum height for the container
+    overflow: auto; Enable vertical scrolling */
+ 
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.filter-options {
+  margin-top: 10px;
+  display: none;
+}
+
+.filter-options input {
+  margin-right: 8px;
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.price-range input {
+  width: 80px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked ~ .filter-options,
+input[type="radio"]:checked ~ .filter-options {
+  display: block;
+  accent-color:green ;
+  
+}
+
+.filter-toggle {
+  display: none;
+}
+
+.filter-toggle + label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Necessary for using ::after */
+}
+
+.filter-toggle + label:hover {
+  color: #007bff;
+}
+
+.filter-toggle + label::after {
+  content: "";
+  position: absolute;
+  /* top: 50%; */
+  right: 10px; /* Adjust as needed */
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+  /* background-color: antiquewhite; */
+}
+
+.filter-toggle:checked + label::after {
+  transform: rotate(225deg) translate(-50%, -50%);
+}
+
